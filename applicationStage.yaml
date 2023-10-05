@@ -10,7 +10,7 @@ spec:
     targetRevision: test  # Specify the branch you want to use, e.g., "main"
     path: dev
   destination:
-    server: https://127.0.0.0:36087
+    server: https://kubernetes.default.svc
     namespace: stage
   syncPolicy:
     syncOptions:
