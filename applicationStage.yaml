@@ -1,7 +1,7 @@
 apiVersion: argoproj.io/v1alpha1
 kind: Application
 metadata:
-  name: my-app-staging-main
+  name: my-app-staging-stage
   namespace: argocd
 spec:
   project: default
