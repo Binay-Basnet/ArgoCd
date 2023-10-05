@@ -1,0 +1,20 @@
+apiVersion: argoproj.io/v1alpha1
+kind: Application
+metadata:
+  name: my-app-staging-main
+  namespace: stage
+spec:
+  project: default
+  source:
+    repoURL: https://github.com/Binay-Basnet/ArgoCd.git
+    targetRevision: test  # Specify the branch you want to use, e.g., "main"
+    path: dev
+  destination:
+    server: https://0.0.0.0:36087
+    namespace: stage
+  syncPolicy:
+    syncOptions:
+    - CreateNamespace=true
+# this is used is self heal l
+    automated:
+      selfHeal: true
